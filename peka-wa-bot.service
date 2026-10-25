@@ -1,0 +1,15 @@
+[Unit]
+Description=Peka community WhatsApp bot (Baileys)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/home/hatch/workspace/peka-wa-bot
+ExecStart=/usr/bin/node /home/hatch/workspace/peka-wa-bot/index.js
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
